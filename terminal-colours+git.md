@@ -29,3 +29,10 @@ unset color_prompt force_color_prompt
 ```
 
 After that run `source ~/.bashrc` so the file will be re-executed and changes applied immediately
+
+In regards to the colours, they are the `01;??m` in the `[\033[01;33m\]` blocks, they represent the colour for the very next instruction. More colours in http://unix.stackexchange.com/a/124408
+
+Also, a quick turo in regards to the fields in the config:
+u = username
+h = host
+w = working folder
