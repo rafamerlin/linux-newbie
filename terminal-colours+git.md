@@ -1,5 +1,41 @@
 #### To add Colours to the Bash (including Git Branch)
 
+##### Manjaro: 
+
+Unlike others, manjaro doesn't use `~/.bashrc` directly, it uses `~/.extend.bashrc` instead.
+
+The structure is pretty much the same as Ubuntu's one, but has some difference in the script and also the script caters for root or regular user.
+
+So for Arch I searched for: 
+`if ${use_color} ; then`
+
+And added bellow this function the following:
+```
+parse_git_branch() {
+ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+```
+
+Also inside the function I've replaced this:
+```
+	if [[ ${EUID} == 0 ]] ; then
+		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
+	else
+		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
+	fi
+```
+
+With this:
+```
+	if [[ ${EUID} == 0 ]] ; then
+		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;33m\]$(parse_git_branch)\[\033[01;31m\]]\$\[\033[00m\] '
+	else
+		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;33m\]$(parse_git_branch)\[\033[01;32m\]]\$\[\033[00m\] '
+	fi
+```
+
+##### Ubuntu Mate:
+
 We have to edit the file `~/.bashrc`
 
 Search for the following line and uncomment it
