@@ -1,7 +1,5 @@
 #### Arch is dimming my monitor during videos on Firefox.
 
-In theory the app called `caffeine-ng` should fix this, but apparently it doesn't work with XFCE power manager.
+Right click on the power management icon (the battery icon).
 
-I've installed a AUR package called `xfce4-power-manager-devel` that conflicts with the original `xfce4-power-manager` that I removed.
-
-If something goes wrong, uninstall the devel one and re-install the original.
+Sometimes it may take up to 3 seconds to show the popup, when it shows, click on Presentation Mode, the power saving settings are not going to dim the monitor or let the computer sleep.
