@@ -26,6 +26,8 @@ export EDITOR=vi
 pacaur -S vim
 ```
 
+If you want to make export fixed for editor, add it to the last line of `~/.extend.bashrc`
+
 This will isntall pacaur and it's dependencies.
 
 Then after pacaur is installed we can use `pacaur -S packageName` to install stuff.
@@ -34,3 +36,13 @@ Something also useful is the remove cache from pacaur, it will remove all the un
 `pacaur -Sc`
 
 If you want to uninstall some other package, you can use pacman directly, as all of them are registered on pacman after instalation.
+
+##### Clean up unused dependencies.
+Since we have `pacaur` installed, we can use it instead of using `pacman` directly.
+I think there's no difference though.
+
+First let's see all the unused/orphans packages.
+`pacman -Qdt`
+
+Now we remove them:
+`pacman -Rsn $(pacman -Qdtq)`
