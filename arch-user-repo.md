@@ -46,3 +46,11 @@ First let's see all the unused/orphans packages.
 
 Now we remove them:
 `pacman -Rsn $(pacman -Qdtq)`
+
+##### Update all the packages
+To do this use the command:
+`pacaur -Syu`
+
+Where `-S` = extend pacman operations to the AUR
+      `-y` = download, make and inscall packages
+      `-u` = update the AUR packages 
