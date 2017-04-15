@@ -8,9 +8,9 @@ Here are the 2 issues on github that helped me to get here:
 [https://github.com/OmniSharp/omnisharp-vscode/issues/661]
 [https://github.com/OmniSharp/omnisharp-vscode/issues/1323]
 
-The 1232 was the one where I docummented how I fixed it.
+The 1232 was the one where I [Merurino] docummented how I made it work for me.
 
-Then we use `pacaur` to install icu54 and icu55.
+After choosing the "New" or "Old way and doing it's steps (the new is still only in private release), you need to use `pacaur` to install `icu54` and `icu55`.
 These are libraries that help some apps to work, apparently it's the case of the debugger (we are using ubuntu's one here, that maybe is the reason.)
 
 ##### New way of making it download Ubuntu's distro for Arch:
