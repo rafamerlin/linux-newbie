@@ -8,7 +8,7 @@ First we find the package, clone it using GIT, and then run
 ##### Tool to help doing this (better than using the repo manually)
 The tool is called `pacaur`
 
-This tool allows me to download packages and it's dependencies automatically (using `makepkg` forces me to download each indivitual dependency).
+This tool allows me to download packages and it's dependencies automatically (using `makepkg` forces me to download each individual dependency).
 
 The best way to install it is using another one (that I've heard is not as secure as pacaur called `yaourt`)
 
@@ -28,14 +28,14 @@ pacaur -S vim
 
 If you want to make export fixed for editor, add it to the last line of `~/.extend.bashrc`
 
-This will isntall pacaur and it's dependencies.
+This will install pacaur and it's dependencies.
 
 Then after pacaur is installed we can use `pacaur -S packageName` to install stuff.
 
-Something also useful is the remove cache from pacaur, it will remove all the unecessary files after the instalations:
+Something also useful is the remove cache from pacaur, it will remove all the unnecessary files after the installations:
 `pacaur -Sc`
 
-If you want to uninstall some other package, you can use pacman directly, as all of them are registered on pacman after instalation.
+If you want to uninstall some other package, you can use pacman directly, as all of them are registered on pacman after installation.
 
 ##### Clean up unused dependencies.
 Since we have `pacaur` installed, we can use it instead of using `pacman` directly.
@@ -52,5 +52,5 @@ To do this use the command:
 `pacaur -Syu`
 
 Where `-S` = extend pacman operations to the AUR
-      `-y` = download, make and inscall packages
+      `-y` = download, make and install packages
       `-u` = update the AUR packages 
