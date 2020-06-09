@@ -13,12 +13,7 @@ This tool allows me to download packages and it's dependencies automatically (us
 The best way to install it is using another one (that I've heard is not as secure as pacaur called `yaourt`)
 
 To install yaourt we do this:
-`sudo pacman -S yaourt`
-
-Then we do this:
-`yaourt -S pacaur`
-
-!Important: sometimes `cower` package may have issues, I had to add a key on `gpd` to make it work, as provided by the maintainer in AUR [https://aur.archlinux.org/packages/cower/]
+`sudo pacman -S pacaur`
 
 Also, pacaur may require an editor, you can install vim using pacman and them do this:
 ```
