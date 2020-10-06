@@ -42,6 +42,12 @@ First let's see all the unused/orphans packages.
 Now we remove them:
 `pacman -Rsn $(pacman -Qdtq)`
 
+#### Clean up package cache
+`pacman -Sc` < This will remove the cache from pacman on previous versions of apps (keeping the current one)
+`pacman -Scc` < Will clean up the cache completely.
+
+Also works with `pacaur`
+
 ##### Update all the packages
 To do this use the command:
 `pacaur -Syu`
